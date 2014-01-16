@@ -2,7 +2,7 @@
 Contributors: edwardtownend
 Tags: advanced-custom-fields, acf, oembed
 Requires at least: 3.4
-Tested up to: 3.3.1
+Tested up to: 3.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,6 +40,21 @@ function my_register_fields()
 	include_once('acf-oembed/acf-oembed.php');
 }
 `
+
+== Frequently Asked Questions ==
+
+= What oEmbed sources are supported? =
+
+Any supported by WordPress. See [Embeds on wordpress.org](http://codex.wordpress.org/Embeds)
+
+= Can I use this in a repeater field? =
+
+Yep.
+
+== Screenshots ==
+
+1. The Add Field interface.
+2. The field in an Advanced Custom Field.
 
 == Changelog ==
 
