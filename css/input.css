@@ -20,6 +20,10 @@
 			background: #fcfcfc url(../images/spinner.gif) no-repeat center center;
 		}
 
+	.acf-oembed-field .field-wrap {
+		clear: both;
+	}
+
 	.acf-oembed-field .oembed {
 		width: 100%;
 	}

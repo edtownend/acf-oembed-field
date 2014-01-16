@@ -89,7 +89,7 @@ class acf_field_oembed extends acf_field
 		<tr class="field_option field_option_<?php echo $this->name; ?>">
 			<td class="label">
 				<label><?php _e("Returned Size",'acf'); ?></label>
-				<p><?php _e("Size of embed returned to front end. Only applies to HTML and WP_oEmbed object return types.",'acf') ?></p>
+				<p><?php _e("Size of embed returned to front end. Only applies to HTML and WP_oEmbed object return types. Default uses the max height and width defined in Media Settings.",'acf') ?></p>
 			</td>
 			<td>
 				<?php
@@ -146,7 +146,7 @@ class acf_field_oembed extends acf_field
 		// defaults?
 		$field = array_merge($this->defaults, $field);
 
-		$dimensions = $this->get_image_size_dimensions($field['returned_size']);
+		$dimensions = $this->get_image_size_dimensions($field['preview_size']);
 
 		if ( $dimensions ) {
 			$preview = wp_oembed_get($field['value'], $dimensions);
@@ -157,8 +157,13 @@ class acf_field_oembed extends acf_field
 		// create Field HTML
 		?>
 		<div class="acf-oembed-field">
-			<div class="embed_wrap"><?php echo $preview; ?></div>
-			<input type="url" id="<?= $field['id']; ?>" class="<?= $field['class']; ?>" name="<?= $field['name']; ?>" value="<?= $field['value'] ?>">
+			<div class="embed_wrap" data-preview-width="<?php echo $dimensions['width'] ?>" data-preview-height="<?php echo $dimensions['height'] ?>"><?php echo $preview; ?></div>
+			<div class="field-wrap">
+				<div class="acf-input-prepend">URL</div>
+				<div class="acf-input-wrap">
+					<input type="url" id="<?= $field['id']; ?>" class="<?= $field['class']; ?>" name="<?= $field['name']; ?>" value="<?= $field['value'] ?>">
+				</div>
+			</div>
 		</div>
 		<?php
 	}
@@ -218,7 +223,7 @@ class acf_field_oembed extends acf_field
 		// defaults?
 		$field = array_merge($this->defaults, $field);
 
-		$dimensions = $this->get_image_size_dimensions($field['preview_size']);
+		$dimensions = $this->get_image_size_dimensions($field['returned_size']);
 
 		switch ($field['returned_format']) {
 			case 'html':
@@ -279,7 +284,7 @@ class acf_field_oembed extends acf_field
 	 * get_image_size_dimensions()
 	 *
 	 * Get width and height for a defined image size
-	 * @param  [varname] [description]
+	 * @param  string $size A defined image size, eg 'medium'
 	 * @return array ['width'] & ['height'] or false
 	 */
 	function get_image_size_dimensions($size) {
