@@ -58,5 +58,8 @@ Yep.
 
 == Changelog ==
 
+= 1.0.1 =
+* Prevent PHP error caused by missing v3 compatilility
+
 = 1.0.0 =
 * Initial Release.
