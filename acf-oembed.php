@@ -3,7 +3,7 @@
 Plugin Name: Advanced Custom Fields: oEmbed Field
 Plugin URI: https://github.com/dmsqd/acf-oembed-field
 Description: Adds a oEmbed field type to Advanced Custom Fields
-Version: 1.0.1
+Version: 1.0.2
 Author: DMSQD
 Author URI: http://dmsqd.com
 License: GPLv2 or later
@@ -38,7 +38,7 @@ class acf_field_oembed_plugin
 		add_action('init', array( $this, 'init' ), 5);
 
 		//register ajax handler
-		require_once( __DIR__ . '/oembed-ajax.php' );
+		require_once(dirname(__FILE__) . '/oembed-ajax.php' );
 		add_action( 'wp_ajax_acf_oembed_handler', array( 'acf_oembed_ajax', 'oembed_handler' ) );
 
 	}
@@ -72,7 +72,7 @@ class acf_field_oembed_plugin
 
 	function register_fields()
 	{
-		include_once('oembed-v4.php');
+		include_once(dirname(__FILE__) . '/oembed-v4.php');
 	}
 
 }
