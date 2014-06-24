@@ -12,7 +12,7 @@ Requires the Advanced Custom Fields plugin. Output can be selected as HTML embed
 
 This add-on will work with:
 
-* version 4 and up
+* ACF version 4 and up
 * Repeater Field
 
 ### Installation

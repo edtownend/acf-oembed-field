@@ -2,7 +2,7 @@
 Contributors: edwardtownend
 Tags: advanced-custom-fields, acf, oembed
 Requires at least: 3.4
-Tested up to: 3.8
+Tested up to: 3.9.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,7 +49,7 @@ Any supported by WordPress. See [Embeds on wordpress.org](http://codex.wordpress
 
 = Can I use this in a repeater field? =
 
-Yep.
+Yep, you sure can.
 
 == Screenshots ==
 
@@ -58,8 +58,11 @@ Yep.
 
 == Changelog ==
 
+= 1.0.2 =
+* Improve reliability on freaky servers
+
 = 1.0.1 =
-* Prevent PHP error caused by missing v3 compatilility
+* Prevent PHP error caused by missing v3 compatibility
 
 = 1.0.0 =
 * Initial Release.
