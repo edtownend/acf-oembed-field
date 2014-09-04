@@ -247,7 +247,7 @@ class acf_field_oembed extends acf_field
 	 * @param  array $args eg. dimensions from get_image_size_dimensions
 	 * @return object or false
 	 */
-	function get_oembed_object($url, $args) {
+	function get_oembed_object($url, $args = array()) {
 		require_once( ABSPATH . WPINC . '/class-oembed.php' );
 		$oembed = _wp_oembed_get_object();
 		$provider = false;
