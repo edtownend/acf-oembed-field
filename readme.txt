@@ -13,6 +13,8 @@ Adds an oEmbed field type to Advanced Custom Fields.
 
 Requires the Advanced Custom Fields plugin. Output can be selected as HTML embed, URL, or data object. Includes settings for preview and output resolution and will accept any provider registered in WordPress.
 
+**With the news that ACF V5 includes a built-in oEmbed field type, we're discontinuing further development of this plugin. The plugin will remain online for legacy V4 support to those that haven’t upgraded, but only essential updates will be released.**
+
 = Compatibility =
 
 This add-on will work with:

@@ -2,6 +2,8 @@
 
 Adds a 'oEmbed' field type for the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) WordPress plugin.
 
+**With the news that ACF V5 includes a built-in oEmbed field type, we're discontinuing further development of this plugin. The plugin will remain online for legacy V4 support to those that haven’t upgraded, but only essential updates will be released.**
+
 -----------------------
 
 ### Overview
