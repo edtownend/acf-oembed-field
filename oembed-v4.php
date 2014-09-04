@@ -161,7 +161,7 @@ class acf_field_oembed extends acf_field
 			<div class="field-wrap">
 				<div class="acf-input-prepend">URL</div>
 				<div class="acf-input-wrap">
-					<input type="url" id="<?php echo esc_attr($field['id']); ?>" class="<?php echo esc_attr($field['class']); ?>" name="<?php echo esc_attr($field['name']); ?>" value="<?php echo esc_attr($field['value']); ?>">
+					<input type="url" id="<?= $field['id']; ?>" class="<?= $field['class']; ?>" name="<?= $field['name']; ?>" value="<?= $field['value'] ?>">
 				</div>
 			</div>
 		</div>
