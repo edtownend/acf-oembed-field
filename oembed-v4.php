@@ -187,7 +187,7 @@ class acf_field_oembed extends acf_field
 
 
 		// register acf scripts
-		wp_register_script('acf-input-oembed', $this->settings['dir'] . 'js/input.js', array('acf-input'), $this->settings['version']);
+		wp_register_script('acf-input-oembed', $this->settings['dir'] . 'js/input.min.js', array('acf-input'), $this->settings['version']);
 		wp_register_style('acf-input-oembed', $this->settings['dir'] . 'css/input.css', array('acf-input'), $this->settings['version']);
 
 		// scripts
