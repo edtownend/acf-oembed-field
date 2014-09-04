@@ -2,7 +2,7 @@
 Contributors: edwardtownend
 Tags: advanced-custom-fields, acf, oembed
 Requires at least: 3.4
-Tested up to: 3.9.1
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,7 @@ Requires the Advanced Custom Fields plugin. Output can be selected as HTML embed
 
 This add-on will work with:
 
-* version 4 and up
+* Advanced Custom Fields version 4 and up
 * Repeater Field
 
 == Installation ==
@@ -57,6 +57,10 @@ Yep, you sure can.
 2. The field in an Advanced Custom Field.
 
 == Changelog ==
+
+= 1.0.3 =
+* Remove PHP short tag dependancy
+* Fix for 'Missing argument' warning when getting the object and not supplying arguments
 
 = 1.0.2 =
 * Improve reliability on freaky servers
